@@ -1,0 +1,20 @@
+.quem-somos-texto {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.5;
+  margin: 20px;
+  text-align: justify;
+}
+
+.quem-somos-texto div {
+  margin-bottom: 20px;
+}
+
+.aspas {
+  font-weight: bold;
+  font-size: 70px;
+}
+
+.aspas-right {
+  text-align: right;
+}
