@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container px-5">
+    <a class="navbar-brand" routerLink="/">4CSS - LANDPAGE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" (click)="onHomeClick()">
+            <i class="bi bi-house-door-fill"></i> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">
+            <i class="bi bi-info-circle-fill"></i> Sobre
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="onContactClick()">
+            <i class="bi bi-envelope-fill"></i> Contatos
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/services">
+            <i class="bi bi-gear-fill"></i> Serviços
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
