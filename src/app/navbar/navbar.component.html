@@ -12,18 +12,20 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/about">
+          <a class="nav-link" (click)="onAboutClick()">
             <i class="bi bi-info-circle-fill"></i> Sobre
           </a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" (click)="onServicesClick()">
+            <i class="bi bi-gear-fill"></i> Serviços
+          </a>
+        </li>
+
         <li class="nav-item">
           <a class="nav-link" (click)="onContactClick()">
             <i class="bi bi-envelope-fill"></i> Contatos
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/services">
-            <i class="bi bi-gear-fill"></i> Serviços
           </a>
         </li>
       </ul>

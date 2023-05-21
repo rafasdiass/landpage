@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 export class NavbarComponent {
   @Output() contactClick = new EventEmitter();
   @Output() homeClick = new EventEmitter();
+  @Output() aboutClick = new EventEmitter();
+  @Output() servicesClick = new EventEmitter();
 
   constructor(private router: Router) { }
 
@@ -20,5 +22,15 @@ export class NavbarComponent {
   onHomeClick(): void {
     console.log('Home clicked');
     this.homeClick.emit();
+  }
+
+  onAboutClick(): void {
+    console.log('About clicked');
+    this.aboutClick.emit();
+  }
+
+  onServicesClick(): void {
+    console.log('Services clicked');
+    this.servicesClick.emit();
   }
 }
