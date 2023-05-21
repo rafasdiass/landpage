@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +13,7 @@ export class NavbarComponent {
   @Output() aboutClick = new EventEmitter();
   @Output() servicesClick = new EventEmitter();
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private sanitizer: DomSanitizer ) { }
 
   onContactClick(): void {
     console.log('Contact clicked');
@@ -33,4 +34,10 @@ export class NavbarComponent {
     console.log('Services clicked');
     this.servicesClick.emit();
   }
+  getLogoUrl() {
+    const imagePath = 'src/assets/img/logo.png'; // Caminho da imagem relativo ao diretório de assets
+    return this.sanitizer.bypassSecurityTrustResourceUrl(imagePath);
+  }
+  
+
 }
