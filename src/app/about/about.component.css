@@ -1,4 +1,4 @@
-.quem-somos-texto {
+quem-somos-texto {
   font-size: 18px;
   color: #333;
   line-height: 1.5;
@@ -18,9 +18,15 @@
 .aspas-right {
   text-align: right;
 }
+
 .social-icon {
   font-size: 50px; /* or whatever size you want */
 }
+
 .social-icon:hover {
   color: red;
+}
+
+.quem-somos-title {
+  text-align: center;
 }

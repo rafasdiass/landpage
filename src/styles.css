@@ -1,1 +1,12 @@
-@import '~bootstrap-icons/font/bootstrap-icons.css';
+app-home::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid #000; /* ajuste a espessura e a cor conforme necessário */
+  width: 100%;
+}
+app-about::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid #000; /* ajuste a espessura e a cor conforme necessário */
+  width: 100%;
+}
