@@ -6,3 +6,26 @@
   width: 100%;
   z-index: 100;
 }
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item{
+  cursor: pointer;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-link {
+  margin-left: 10px;
+}
+
+.logo-image {
+  height: 40px;
+  margin-right: 10px;
+}
