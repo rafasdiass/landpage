@@ -21,3 +21,6 @@
 .social-icon {
   font-size: 50px; /* or whatever size you want */
 }
+.social-icon:hover {
+  color: red;
+}
