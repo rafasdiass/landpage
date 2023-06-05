@@ -1,64 +1,63 @@
-<section class="bg-light py-5">
-    <div class="text-center mb-5">
-      <h2 class="fw-bolder">Portfólio</h2>
-    </div>
-    <div class="row gx-5 justify-content-center">
-      <!-- Botão para abrir o carrossel -->
-      <div class="col-lg-6">
-        <div class="row">
-          <img [src]="'assets/img/logoDinner.png'" alt="Logo DinnerDelivery" class="logo-dinner">
-          <h4>Dinner Delivery</h4>
-          <p>
-            O Dinner Delivery é uma plataforma de e-commerce de última geração com um sistema completo que simplifica a experiência de compra online, oferecendo uma variedade de recursos incríveis.
-          </p>
-          <p>
-            Desenvolvido utilizando tecnologias de ponta, o DinnerDelivery foi construído com Angular e Node.js, combinando o poder do frontend e do backend para oferecer uma experiência perfeita aos usuários.
-            Essa solução robusta permite que os clientes realizem pedidos de forma fácil e rápida, além de desfrutarem de um processo de entrega eficiente.
-          </p>
-          <div *ngIf="activeCarousel && activeCarousel.images && activeCarousel.images.length > 0" class="col-3">
-            <img [src]="'assets/img/portfolio/' + activeCarousel.images[0].src" class="img-thumbnail thumbnail" [alt]="activeCarousel.images[0].alt" (click)="expandCarousel(activeCarousel, activeCarousel.images[0])">
-          </div>
-          <ng-container *ngFor="let image of carousels[0]?.images?.slice(1) || []">
-            <div class="col-3">
-              <img [src]="'assets/img/portfolio/' + image.src" class="img-thumbnail thumbnail" [alt]="image.alt" (click)="expandCarousel(carousels[0], image)">
-            </div>
-          </ng-container>
-          
+<section class="bg-light py-5" id="portfolioSection">
+  <div class="text-center mb-5">
+    <h2 class="fw-bolder">Portfólio</h2>
+  </div>
+  <div class="row gx-5 justify-content-center">
+    <!-- Botão para abrir o carrossel -->
+    <div class="col-lg-6">
+      <div class="row">
+        <img [src]="'assets/img/logoDinner.png'" alt="Logo DinnerDelivery" class="logo-dinner">
+        <h4>Dinner Delivery</h4>
+        <p>
+          O Dinner Delivery é uma plataforma de e-commerce de última geração com um sistema completo que simplifica a experiência de compra online, oferecendo uma variedade de recursos incríveis.
+        </p>
+        <p>
+          Desenvolvido utilizando tecnologias de ponta, o DinnerDelivery foi construído com Angular e Node.js, combinando o poder do frontend e do backend para oferecer uma experiência perfeita aos usuários.
+          Essa solução robusta permite que os clientes realizem pedidos de forma fácil e rápida, além de desfrutarem de um processo de entrega eficiente.
+        </p>
+        <div *ngIf="activeCarousel && activeCarousel.images && activeCarousel.images.length > 0" class="col-3">
+          <img [src]="'assets/img/portfolio/' + activeCarousel.images[0].src" class="img-thumbnail thumbnail" [alt]="activeCarousel.images[0].alt" (click)="expandCarousel(activeCarousel, activeCarousel.images[0])">
         </div>
-        <br>
-        <!-- CARROSSEL 2 -->
-        <div class="row">
-          <img [src]="'assets/img/logoBarber.png'" alt="Logo Barber" class="logo-barber">
-          <h4>Barber Manager</h4>
-          <p>
-            O Barber Manager é um gerenciador de barbearias completo e sofisticado. Com ele é possível criar agendamentos, cadastrar clientes, gerenciar pagamentos e despesas, exportar relatórios e muito mais!
-          </p>
-          <div *ngFor="let image of carousels[1]?.images || []" class="col-3">
-            <img [src]="'assets/img/portfolio/' + image.src" class="img-thumbnail thumbnail" [alt]="image.alt" (click)="expandCarousel(carousels[1], image)">
+        <ng-container *ngFor="let image of carousels[0]?.images?.slice(1) || []">
+          <div class="col-3">
+            <img [src]="'assets/img/portfolio/' + image.src" class="img-thumbnail thumbnail" [alt]="image.alt" (click)="expandCarousel(carousels[0], image)">
           </div>
+        </ng-container>
+        
+      </div>
+      <br>
+      <!-- CARROSSEL 2 -->
+      <div class="row">
+        <img [src]="'assets/img/logoBarber.png'" alt="Logo Barber" class="logo-barber">
+        <h4>Barber Manager</h4>
+        <p>
+          O Barber Manager é um gerenciador de barbearias completo e sofisticado. Com ele é possível criar agendamentos, cadastrar clientes, gerenciar pagamentos e despesas, exportar relatórios e muito mais!
+        </p>
+        <div *ngFor="let image of carousels[1]?.images || []" class="col-3">
+          <img [src]="'assets/img/portfolio/' + image.src" class="img-thumbnail thumbnail" [alt]="image.alt" (click)="expandCarousel(carousels[1], image)">
         </div>
       </div>
     </div>
-    <!-- Carrossel -->
-    <div class="carousel-overlay" *ngIf="showCarousel">
-      <div class="carousel-container">
-        <button class="close-button" (click)="closeCarousel()">X</button>
-        <div #carousel id="carousel" class="carousel slide carousel-fade">
-          <div class="carousel-inner">
-            <div *ngFor="let image of getActiveCarouselImages(); let i = index" class="carousel-item" [class.active]="i === activeIndex">
-              <img [src]="'assets/img/portfolio/' + image.src" class="d-block w-100" [alt]="image.alt">
-            </div>
+  </div>
+  <!-- Carrossel -->
+  <div class="carousel-overlay" *ngIf="showCarousel">
+    <div class="carousel-container">
+      <button class="close-button" (click)="closeCarousel()">X</button>
+      <div #carousel id="carousel" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+          <div *ngFor="let image of getActiveCarouselImages(); let i = index" class="carousel-item" [class.active]="i === activeIndex">
+            <img [src]="'assets/img/portfolio/' + image.src" class="d-block w-100" [alt]="image.alt">
           </div>
-          <a class="carousel-control-prev" role="button" (click)="previousImage()" *ngIf="activeIndex !== 0">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only"></span>
-          </a>
-          <a class="carousel-control-next" role="button" (click)="nextImage()" *ngIf="activeIndex !== activeCarouselImages.length - 1">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only"></span>
-          </a>
         </div>
+        <a class="carousel-control-prev" role="button" (click)="previousImage()" *ngIf="activeIndex !== 0">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only"></span>
+        </a>
+        <a class="carousel-control-next" role="button" (click)="nextImage()" *ngIf="activeIndex !== activeCarouselImages.length - 1">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only"></span>
+        </a>
       </div>
-    </div>  
-  </section>
-  
+    </div>
+  </div>  
+</section>

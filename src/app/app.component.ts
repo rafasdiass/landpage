@@ -9,8 +9,8 @@ export class AppComponent implements OnInit {
   @ViewChild('contactSection', { static: true, read: ElementRef }) contactSection!: ElementRef;
   @ViewChild('homeSection', { static: true, read: ElementRef }) homeSection!: ElementRef;
   @ViewChild('aboutSection', { static: true, read: ElementRef }) aboutSection!: ElementRef;
+  @ViewChild('portfolioSection', { static: true, read: ElementRef }) portfolioSection!: ElementRef;
   @ViewChild('servicesWorkSection', { static: true, read: ElementRef }) servicesWorkSection!: ElementRef;
-  @ViewChild('portfolioWorkSection', { static: true, read: ElementRef }) portfolioWorkSection!: ElementRef;
 
   
   constructor() { }
@@ -32,13 +32,13 @@ export class AppComponent implements OnInit {
     this.aboutSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
 
+  scrollToPortfolio(): void {
+    console.log('Scrolling to portfolio');
+    this.portfolioSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+
   scrollToServicesWork(): void {
     console.log('Scrolling to services work');
     this.servicesWorkSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
-  }
-
-  scrollToPortfolio(): void {
-    console.log('Scrolling to services work');
-    this.portfolioWorkSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
 }

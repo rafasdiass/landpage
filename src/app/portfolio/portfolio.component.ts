@@ -30,7 +30,14 @@ export class PortfolioComponent {
         { src: 'barber3.png', alt: 'Barber Manager Image3' }
       ]
     },
- 
+    {
+      name: 'Carrossel 3',
+       images: [
+       { src: 'barber.png', alt: 'Dinner Delivery Image' },
+       { src: 'barber2.png', alt: 'Barber Manager Image' },
+       { src: 'barber3.png', alt: 'Clinic Manager Image' }
+      ]
+    }
   ];
 
   showCarousel = false;
