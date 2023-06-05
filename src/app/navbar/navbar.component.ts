@@ -11,6 +11,7 @@ export class NavbarComponent {
   @Output() homeClick = new EventEmitter();
   @Output() aboutClick = new EventEmitter();
   @Output() servicesClick = new EventEmitter();
+  @Output() portfolioClick = new EventEmitter();
 
   public logoImage = 'assets/img/logo.png';
   public navbarCollapsed = true;
@@ -37,8 +38,14 @@ export class NavbarComponent {
     this.servicesClick.emit();
   }
 
+  onPortfolioClick(): void {
+    console.log('Portfolio clicked');
+    this.portfolioClick.emit();
+  }
+
   toggleNavbar(): void {
     this.navbarCollapsed = !this.navbarCollapsed;
   }
+
   
 }

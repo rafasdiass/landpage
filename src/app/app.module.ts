@@ -10,6 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { ServicesworkComponent } from './serviceswork/serviceswork.component';
 import { AboutComponent } from './about/about.component';
 import { CommonModule } from '@angular/common';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+
+
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import { CommonModule } from '@angular/common';
     FooterComponent,
     HomeComponent,
     ServicesworkComponent,
-    AboutComponent
+    AboutComponent,
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,

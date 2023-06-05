@@ -10,7 +10,9 @@ export class AppComponent implements OnInit {
   @ViewChild('homeSection', { static: true, read: ElementRef }) homeSection!: ElementRef;
   @ViewChild('aboutSection', { static: true, read: ElementRef }) aboutSection!: ElementRef;
   @ViewChild('servicesWorkSection', { static: true, read: ElementRef }) servicesWorkSection!: ElementRef;
+  @ViewChild('portfolioWorkSection', { static: true, read: ElementRef }) portfolioWorkSection!: ElementRef;
 
+  
   constructor() { }
 
   ngOnInit(): void { }
@@ -33,5 +35,10 @@ export class AppComponent implements OnInit {
   scrollToServicesWork(): void {
     console.log('Scrolling to services work');
     this.servicesWorkSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  scrollToPortfolio(): void {
+    console.log('Scrolling to services work');
+    this.portfolioWorkSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
 }
