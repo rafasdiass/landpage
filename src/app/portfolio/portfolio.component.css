@@ -1,0 +1,147 @@
+#carousel {
+    max-width: 800px;
+    height: 900px;
+    margin-top: 7rem;
+    border-radius: 1rem;
+}
+
+/* fade ao transitar entre as imagens  */
+
+.carousel-control-next {
+    /* Resto das propriedades */
+    right: 1px; /* Ajuste a posição conforme necessário */
+}
+
+.thumbnail {
+    cursor: pointer;
+}
+
+.thumbnail:hover {
+    opacity: 0.7;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-item img {
+    object-fit: cover;
+}
+
+.carousel-indicators {
+    bottom: 10px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 20px;
+    height: 20px;
+    top: calc(50% - 15px);
+    background-color: rgba(0, 0, 0, 0.267);
+    border-radius: 90%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
+}
+
+.carousel-control-prev-icon::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.carousel-control-next-icon::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* posicao do carrossel */
+
+.carousel-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.carousel-container {
+    max-width: 800px;
+    width: 100%;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-button {
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.171);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000; /* Colocar o botão acima da imagem */
+}
+
+.close-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+/* ICONES PROJETOS */
+
+.logo-dinner{
+    width: 30%;
+    margin-bottom: 1rem;
+}
+
+.logo-barber{
+    width: 20%;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-indicators li {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.carousel-indicators li.active {
+  background-color: rgba(0, 0, 0, 0.8);
+}
