@@ -3,10 +3,10 @@
     <h2 class="fw-bolder">Portfólio</h2>
   </div>
   <div class="row gx-5 justify-content-center">
-    <!-- Botão para abrir o carrossel -->
+    <!-- CARROSSEL 1 -->
     <div class="col-lg-6">
       <div class="row">
-        <img [src]="'assets/img/logoDinner.png'" alt="Logo DinnerDelivery" class="logo-dinner">
+          <img [src]="'assets/img/logoDinner.png'" alt="Logo DinnerDelivery" class="logo-dinner">
         <h4>Dinner Delivery</h4>
         <p>
           O Dinner Delivery é uma plataforma de e-commerce de última geração com um sistema completo que simplifica a experiência de compra online, oferecendo uma variedade de recursos incríveis.
@@ -28,7 +28,7 @@
       <br>
       <!-- CARROSSEL 2 -->
       <div class="row">
-        <img [src]="'assets/img/logoBarber.png'" alt="Logo Barber" class="logo-barber">
+          <img [src]="'assets/img/logoBarber.png'" alt="Logo Barber" class="logo-barber">
         <h4>Barber Manager</h4>
         <p>
           O Barber Manager é um gerenciador de barbearias completo e sofisticado. Com ele é possível criar agendamentos, cadastrar clientes, gerenciar pagamentos e despesas, exportar relatórios e muito mais!
@@ -39,7 +39,7 @@
       </div>
     </div>
   </div>
-  <!-- Carrossel -->
+  <!-- Carrossel function -->
   <div class="carousel-overlay" *ngIf="showCarousel">
     <div class="carousel-container">
       <button class="close-button" (click)="closeCarousel()">X</button>

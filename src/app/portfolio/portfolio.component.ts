@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
 
+interface Image {
+  src: string;
+  alt: string;
+  link: string;
+}
+
 interface Carousel {
   name: string;
   images: { src: string; alt: string; }[];
@@ -16,7 +22,8 @@ export class PortfolioComponent {
     {
       name: 'Carrossel 1',
       images: [
-        { src: 'dinner.png', alt: 'Dinner Delivery Image' },
+        
+        { src: 'dinner.png',  alt: 'Dinner Delivery Image1' },
         { src: 'dinner2.png', alt: 'Dinner Delivery Image2' },
         { src: 'dinner3.png', alt: 'Dinner Delivery Image3' },
         { src: 'dinner4.png', alt: 'Dinner Delivery Image4' }
@@ -25,19 +32,29 @@ export class PortfolioComponent {
     {
       name: 'Carrossel 2',
       images: [
-        { src: 'barber.png', alt: 'Barber Manager Image' },
+        { src: 'barber.png',  alt: 'Barber Manager Image1' },
         { src: 'barber2.png', alt: 'Barber Manager Image2' },
-        { src: 'barber3.png', alt: 'Barber Manager Image3' }
+        { src: 'barber3.png', alt: 'Barber Manager Image3' },
+        { src: 'barber4.png', alt: 'Barber Manager Image4' },
       ]
     },
     {
       name: 'Carrossel 3',
        images: [
-       { src: 'barber.png', alt: 'Dinner Delivery Image' },
-       { src: 'barber2.png', alt: 'Barber Manager Image' },
-       { src: 'barber3.png', alt: 'Clinic Manager Image' }
+       { src: 'clinic.png',   alt: 'Clinic Manager Image1' },
+       { src: 'clinic2.png',  alt: 'Clinic Manager Image2' },
+       { src: 'clinic3.png',  alt: 'Clinic Manager Image3' }
       ]
-    }
+    },
+    {
+      name: 'Carrossel 4',
+       images: [
+       { src: 'lr.png',   alt: 'LR Image1' },
+       { src: 'lr2.png',  alt: 'LR Image2' },
+       { src: 'lr3.png',  alt: 'LR Image3' },
+       { src: 'lr4.png',  alt: 'LR Image3' },
+      ]
+    },
   ];
 
   showCarousel = false;
@@ -55,10 +72,8 @@ export class PortfolioComponent {
     this.activeCarouselImages = this.getActiveCarouselImages();
     this.activeIndex = this.activeCarouselImages.findIndex(img => img.src === image.src); // Definir o índice da imagem clicada
     this.showCarousel = true; // Definir como true para exibir o carrossel
+    document.addEventListener('click', this.closeCarousel);
   }
-  
-  
-  
   
   getActiveCarouselImages() {
     return this.activeCarousel ? this.activeCarousel.images : [];
@@ -76,7 +91,8 @@ export class PortfolioComponent {
     }
   }
 
-  closeCarousel() {
+  closeCarousel = () =>{
     this.showCarousel = false;
   }
+
 }
