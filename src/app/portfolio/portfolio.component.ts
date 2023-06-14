@@ -1,11 +1,5 @@
 import { Component } from '@angular/core';
 
-interface Image {
-  src: string;
-  alt: string;
-  link: string;
-}
-
 interface Carousel {
   name: string;
   images: { src: string; alt: string; }[];
@@ -91,8 +85,11 @@ export class PortfolioComponent {
     }
   }
 
-  closeCarousel = () =>{
+  closeCarousel() {
     this.showCarousel = false;
+    this.activeCarousel = this.carousels[0]; // Redefine o carrossel ativo para o primeiro do array
+    this.activeIndex = 0; // Redefine o índice para 0
+    document.removeEventListener('click', this.closeCarousel); // Remove o evento de click
   }
 
 }
