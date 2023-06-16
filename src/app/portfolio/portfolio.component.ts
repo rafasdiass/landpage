@@ -56,11 +56,6 @@ export class PortfolioComponent {
   activeCarousel: Carousel | undefined;
   activeCarouselImages: { src: string; alt: string; }[] = [];
 
-
-  constructor() {
-    this.activeCarousel = this.carousels[0]; // Definir o primeiro carrossel como ativo
-  }
-
   expandCarousel(carousel: Carousel, image: { src: string; alt: string; }) {
     this.activeCarousel = carousel;
     this.activeCarouselImages = this.getActiveCarouselImages();
