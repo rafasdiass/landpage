@@ -16,7 +16,7 @@ export class NavbarComponent {
   public logoImage = 'assets/img/logo.png';
   public navbarCollapsed = true;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   onContactClick(): void {
     console.log('Contact clicked');
@@ -46,6 +46,4 @@ export class NavbarComponent {
   toggleNavbar(): void {
     this.navbarCollapsed = !this.navbarCollapsed;
   }
-
-  
 }
