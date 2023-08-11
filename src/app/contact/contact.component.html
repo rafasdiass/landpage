@@ -23,7 +23,7 @@
                       <label for="phone">Numero de telefone</label>
                   </div>
                   <div class="form-floating mb-2">
-                      <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 3rem" formControlName="message"></textarea>
+                      <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 4rem; overflow: hidden; resize:none" formControlName="message"></textarea>
                       <label for="message">Mensagem</label>
                   </div>
                   <div class="d-none" id="submitSuccessMessage">
@@ -38,7 +38,7 @@
                       <div class="text-center text-danger mb-3">Erro ao enviar a mensagem!</div>
                   </div>
                   <div class="d-grid">
-                      <button class="btn btn-primary btn-lg" id="submitButton" type="submit" [disabled]="!contactForm.valid">Submit</button>
+                      <button class="btn btn-primary btn-md" id="submitButton" type="submit" [disabled]="!contactForm.valid">Submit</button>
                   </div>
               </form>
           </div>
